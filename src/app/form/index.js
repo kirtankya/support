@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './form.scss';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from '../../common/footer';
 
 export default function Form() {
     const [data, setData] = useState({
@@ -246,6 +247,7 @@ export default function Form() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }
