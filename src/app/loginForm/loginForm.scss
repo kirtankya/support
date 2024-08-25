@@ -1,0 +1,51 @@
+.main {
+  padding: 40px;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+
+  
+  .loginForm {
+    padding: 20px;
+    background-color: #fff;
+
+    h2 {
+      font-size: 30px;
+      line-height: 40px;
+      font-weight: 600;
+      text-align: center;
+    }
+    .loginForm_aligment {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+      .email-icon,
+      .pass-icon {
+        font-size: 30px;
+      }
+      input {
+        width: 500px;
+        border: none;
+        border-bottom: 1px solid #000;
+        outline: none;
+      }
+    }
+
+    .button {
+      text-align: center;
+      margin-top: 10px;
+      button {
+        width: 150px;
+        height: 40px;
+        border: none;
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
+    a {
+      display: block;
+      margin: 10px 15px;
+    }
+  }
+}
