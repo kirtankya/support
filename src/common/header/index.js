@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './header.scss';
 import { Container, Nav, Navbar } from 'react-bootstrap'
 
