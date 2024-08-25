@@ -1,0 +1,39 @@
+.support_main {
+  padding: 30px;
+  background-color: #fff;
+  .support_description {
+    margin-bottom: 30px;
+    h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #55555a;
+    }
+    p {
+      font-size: 16px;
+      line-height: 26px;
+      color: #55555a;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .support_guidelines {
+      font-size: 16px;
+      font-weight: 400;
+      margin-top: 10px;
+      color: #55555a;
+    }
+    h3 {
+      font-size: 18px;
+      line-height: 38px;
+      font-weight: 500;
+      color: #55555a;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

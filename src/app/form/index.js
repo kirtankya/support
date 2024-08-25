@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './form.scss';
-import Header from '../../common/header';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from '../../common/footer';
 
 export default function Form() {
     const [data, setData] = useState({
+        supportVisblity: false,
         product: '',
         code: '',
         fullname: '',
@@ -27,6 +27,7 @@ export default function Form() {
             setData(JSON.parse(savedData));
         } else {
             setData({
+                supportVisblity: false,
                 product: '',
                 code: '',
                 fullname: '',
@@ -84,15 +85,6 @@ export default function Form() {
         if (isValid) {
             saveFormData(data); // Save form data to localStorage
             resetForm();
-            if (!data) {
-                toast.success('Form submitted successfully!', {
-                    position: 'top-left'
-                })
-            } else if (!data === '') {
-                toast.error('please form data fill....', {
-                    position: 'top-left'
-                })
-            }
         }
     };
 
@@ -120,6 +112,7 @@ export default function Form() {
 
     const resetForm = () => {
         setData({
+            supportVisblity: false,
             product: '',
             code: '',
             fullname: '',
@@ -134,17 +127,20 @@ export default function Form() {
             agreeVisibility: false,
         });
     };
+
     const saveFormData = (formData) => {
         const savedData = localStorage.getItem('formData');
-        const newData = savedData ? JSON.parse(savedData) : [];
-        newData.push(formData);
-        localStorage.setItem('formData', JSON.stringify(newData));
+        if (savedData) {
+            const existingData = JSON.parse(savedData);
+            const newData = [...existingData, formData];
+            localStorage.setItem('formData', JSON.stringify(newData));
+        } else {
+            localStorage.setItem('formData', JSON.stringify([formData]));
+        }
     };
-
 
     return (
         <div>
-            <Header />
             <div className="container">
                 <div className="support-main">
                     <div className='support_main'>
@@ -153,20 +149,22 @@ export default function Form() {
                         </div>
                         <div className="support-aligment">
                             <div className="support_query">
-                                <input type="radio" name="radio" id="" />
+                                <input type="radio" checked={data.supportVisblity} required name="radio" id="" />
                                 <p>Pre Sale Query(I want to purchase but have some query)</p>
                             </div>
                             <div className="support_query">
-                                <input type="radio" name="radio" id="" />
+                                <input type="radio" checked={data.supportVisblity} required name="radio" id="" />
                                 <p>Post Sale Query(I have purchased and have some query)</p>
                             </div>
                         </div>
                         <div className="product_category">
-                            <p>Product Or Category *</p>
+                            <label>Product Or Category *</label>
                             <select value={selectCategory} onChange={handleChange} name="product" id="">
-                                <option value="">Choose One...</option>
+                                {!selectCategory && <option value="">Choose One...</option>}
                                 {productCategory.map(category => (
-                                    <option key={category} value={category}>{category}</option>
+                                    <option key={category} value={category}>
+                                        {category}
+                                    </option>
                                 ))}
                             </select>
                             <p> With which product or category do you need help?</p>

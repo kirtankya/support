@@ -1,154 +1,26 @@
-@import '../../styles/breakpoints.scss';
-@import '../../styles/common.scss';
-
-.header {
-  width: 100%;
-  padding: 10px;
+.header_aligment {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 999;
-  background-color: #f8ffe8;
+  z-index: 99;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px #000;
+  .navbar {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  .header_Aligment {
-    position: relative;
-    @include flex_row();
-    @include justifycontent_between();
-
-    .header_Logo {
+    .navbar-brand {
       p {
         font-size: 20px;
-        line-height: 30px;
-        font-weight: 600;
-        color: var(--primary-color);
+        margin: 0px;
       }
     }
-
-    .header_Items {
-      @include flex_row();
-      gap: 30px;
-
-      .header_Icon_aligment {
-        @include flex_row();
-        gap: 30px;
-
-        .header_Icon {
-          svg {
-            color: var(--primary-color);
-          }
-        }
-
-        @include breakpoint("max-sm") {
-          display: none;
-        }
-      }
-
-
-    }
-
-    .header_Item {
-      @include flex_row();
-      gap: 30px;
-
-      .button {
-        button {
-          padding: 15px 30px;
-          border-radius: 100px;
-          background-color: var(--secondary-color);
-          color: var(--primary-color);
-          border: none;
-          font-size: 14px;
-          line-height: 24px;
-          font-weight: 600;
-          box-shadow: var(--primary-color) 1px 2px 0px 0px;
-        }
-
-        @include breakpoint("max-xxs") {
-          display: none;
-        }
-      }
-
-
-      .header_MenuIcon {
-        min-width: 50px;
-        max-width: 50px;
-        height: 50px;
-        background-color: var(--secondary-color);
-        border-radius: 100%;
-        @include flex_row();
-        @include justifycontent_center();
-        cursor: pointer;
-
-        svg {
-          color: var(--primary-color);
-        }
-      }
-    }
-  }
-
-  .menu_Items {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    clip-path: circle(0 at 100% 0);
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-
-    &.show {
-      visibility: visible;
-      opacity: 1;
-      clip-path: circle(150% at 100% 0);
-      pointer-events: all;
-    }
-
-    // Make sure it is displayed on small screens
-    @include breakpoint("max-sm") {
-      &.show {
-        visibility: visible;
-        opacity: 1;
-        clip-path: circle(150% at 100% 0);
-        pointer-events: all;
-      }
-    }
-
-    .close_Btn {
-      position: absolute;
-      top: 3%;
-      right: 10%;
-      cursor: pointer;
-    }
-
-    nav {
-      ul {
+    .items {
+      .me-auto {
         display: flex;
-        flex-direction: column;
-        gap: 15px;
-
-        li {
-          a {
-            display: block;
-            font-size: 16px;
-            line-height: 26px;
-            font-weight: 500;
-            color: var(--secondary-color);
-            text-align: center;
-          }
-
-          &.active {
-            padding: 5px 14px;
-            color: var(--primary-color);
-            border-radius: 20px;
-            background: rgba(195, 107, 214, 0.1);
-          }
-        }
+        justify-content: end;
       }
     }
   }
