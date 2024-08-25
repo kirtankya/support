@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './form.scss';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import logo from '../../assets/logo/favicon.png';
 
 export default function Form() {
     const [data, setData] = useState({

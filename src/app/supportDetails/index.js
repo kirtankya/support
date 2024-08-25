@@ -7,13 +7,13 @@ export default function Support() {
             <div className="container">
                 <div className="support_description">
                     <h2>Theme Support</h2>
-                    <p>All product purchases with Girnar comes with a complimentary
+                    <p>All product purchases with Vine Themes comes with a complimentary
                         round-the-clock support for your ease of mind
                     </p>
                 </div>
                 <div className="support_description">
                     <h2>Support Overview</h2>
-                    <p>Our support primarily covers all pre and post-sales questions, basic product related questions, and bug reports. You can send in your requests to our support forum at Girnar. You can also follow us on Twitter to get the latest news and updates regarding our themes.</p>
+                    <p>Our support primarily covers all pre and post-sales questions, basic product related questions, and bug reports. You can send in your requests to our support forum atVine Themes. You can also follow us on Twitter to get the latest news and updates regarding our themes.</p>
                 </div>
                 <div className="support_description">
                     <h2>Eligibility</h2>

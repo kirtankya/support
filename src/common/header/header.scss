@@ -1,36 +1,4 @@
 @import "../../styles/index.scss";
-// .header_aligment {
-//   position: sticky;
-//   top: 0;
-//   left: 0;
-//   z-index: 99;
-//   background-color: #fff;
-//   box-shadow: 0px 0px 10px #000;
-//   .navbar {
-//     padding: 20px;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-
-//     @include breakpoint("max-xs") {
-//       padding: 15px 20px;
-//     }
-//     .navbar-brand {
-//       img {
-//         width: 50px;
-//       }
-//     }
-//     .items {
-//       .me-auto {
-//         display: flex;
-//         justify-content: flex-end;
-//         gap: 10px;
-//         padding-top: 5px;
-//         margin: 0 auto;
-//       }
-//     }
-//   }
-// }
 $color_1: #fff;
 $color_2: #8739fa;
 $background-color_1: #151418;
