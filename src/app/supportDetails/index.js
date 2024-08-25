@@ -39,7 +39,7 @@ export default function Support() {
                     <>
                         <p className='support_guidelines'><b>If you seek theme customization beyond our support scope: </b>Kindly note that customization tasks are outside the purview of our support. However, a trusted partner of ours can assist you in these endeavors.</p>
                     </>
-                    <h3>Check out our <a href="#"> Website</a> for more information.</h3>
+                    <h3>Check out our <a href="https://support-umber-mu.vercel.app/"> Vinethems.com</a> for more information.</h3>
                 </div>
             </div>
         </div>
